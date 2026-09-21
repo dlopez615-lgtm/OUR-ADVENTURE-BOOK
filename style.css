@@ -13,7 +13,7 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #2b170c;
     color: #3b2314;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .oculto {
@@ -22,7 +22,7 @@ body {
 
 .pantalla {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -169,7 +169,7 @@ body {
    ========================================================================== */
 .libro-contenedor {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -178,7 +178,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: none;
 }
 
@@ -194,7 +194,7 @@ body {
     background-size: 10px 10px;
 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px 70px 30px 90px;
     box-shadow: inset 0 0 100px rgba(60, 30, 10, 0.3);
     border-left: 20px solid #3d1e0d;
@@ -211,7 +211,6 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    height: calc(100% - 60px);
     gap: 40px;
 }
 
@@ -220,7 +219,6 @@ body {
     flex: 1.2;
     text-align: left;
     padding-right: 10px;
-    overflow-y: auto;
 }
 
 .pagina h2 {
@@ -251,7 +249,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
 
 .polaroid {
@@ -267,7 +264,8 @@ body {
     align-items: center;
 }
 
-.polaroid img {
+.polaroid img,
+.polaroid video {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -290,8 +288,9 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding-top: 10px;
-    border-top: 1px stroke rgba(74, 37, 17, 0.15);
+    padding-top: 15px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(74, 37, 17, 0.15);
 }
 
 .btn-pag {
@@ -315,4 +314,66 @@ body {
     background-color: rgba(90, 46, 22, 0.25);
     color: rgba(247, 243, 233, 0.4);
     cursor: not-allowed;
+}
+
+/* ==========================================================================
+   6. ADAPTACIÓN PARA CELULARES Y PANTALLAS PEQUEÑAS (MEDIA QUERY)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .contenido-pagina {
+        padding: 30px 20px 20px 25px;
+        border-left: 10px solid #3d1e0d;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .layout-dos-columnas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .columna-texto {
+        width: 100%;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .columna-foto {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .pagina h2 {
+        font-size: 2.8rem;
+    }
+
+    .historia {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .polaroid {
+        max-width: 280px;
+        transform: rotate(0deg);
+    }
+
+    .polaroid img,
+    .polaroid video {
+        height: 230px;
+    }
+
+    .layout-pagina-final h2 {
+        font-size: 3rem !important;
+    }
+
+    #btn-iniciar {
+        bottom: -45px;
+        padding: 6px 20px;
+        font-size: 0.9rem;
+    }
 }
