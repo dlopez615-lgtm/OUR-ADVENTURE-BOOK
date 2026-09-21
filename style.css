@@ -23,9 +23,7 @@ body {
 .pantalla {
     width: 100vw;
     min-height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
 }
 
 /* ==========================================================================
@@ -36,6 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #2b170c;
+    height: 100vh;
 }
 
 .tarjeta-portada {
@@ -145,27 +144,7 @@ body {
 }
 
 /* ==========================================================================
-   3. BOTÓN FLOTANTE
-   ========================================================================== */
-.barra-navegacion {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 100;
-}
-
-.btn-volver {
-    background-color: rgba(212, 163, 115, 0.9);
-    color: #3d2612;
-    border: 1px solid #6a330d;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* ==========================================================================
-   4. DISEÑO EXACTO DE LA PÁGINA (PAPEL KRAFT Y POLAROID)
+   3. ESTRUCTURA Y PÁGINAS DEL LIBRO
    ========================================================================== */
 .libro-contenedor {
     width: 100vw;
@@ -174,9 +153,6 @@ body {
 }
 
 .pagina {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     min-height: 100vh;
     display: none;
@@ -204,7 +180,7 @@ body {
     box-sizing: border-box;
 }
 
-/* DISTRIBUCIÓN EN 2 COLUMNAS (ESCRITORIO) */
+/* ESCRITORIO: 2 COLUMNAS SIDE BY SIDE */
 .layout-dos-columnas {
     display: flex;
     flex-direction: row;
@@ -214,11 +190,17 @@ body {
     gap: 40px;
 }
 
-/* COLUMNA IZQUIERDA */
 .columna-texto {
     flex: 1.2;
     text-align: left;
     padding-right: 10px;
+}
+
+.columna-foto {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagina h2 {
@@ -241,14 +223,6 @@ body {
     font-size: 1.08rem;
     color: #2c1a0e;
     margin-bottom: 16px;
-}
-
-/* COLUMNA DERECHA: FOTO POLAROID */
-.columna-foto {
-    flex: 0.8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .polaroid {
@@ -280,9 +254,7 @@ body {
     text-align: center;
 }
 
-/* ==========================================================================
-   5. BOTONES DE NAVEGACIÓN INFERIORES
-   ========================================================================== */
+/* BOTONES DE NAVEGACIÓN */
 .controles-paginacion {
     display: flex;
     justify-content: space-between;
@@ -317,82 +289,46 @@ body {
 }
 
 /* ==========================================================================
-   6. ADAPTACIÓN EXCLUSIVA PARA CELULARES
+   4. ADAPTACIÓN PARA CELULARES
    ========================================================================== */
 @media (max-width: 768px) {
     body {
         overflow-y: auto !important;
     }
 
-    .pantalla, 
-    .libro-contenedor, 
-    .pagina {
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: 100vh;
-    }
-
     .contenido-pagina {
-        padding: 25px 20px 20px 25px !important;
-        border-left: 12px solid #3d1e0d !important;
+        padding: 25px 15px 25px 20px !important;
+        border-left: 10px solid #3d1e0d !important;
         height: auto !important;
         min-height: 100vh;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
     }
 
     .layout-dos-columnas {
-        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        width: 100% !important;
-        height: auto !important;
         gap: 25px !important;
     }
 
-    .columna-texto {
+    .columna-texto, 
+    .columna-foto {
         width: 100% !important;
         flex: none !important;
         padding-right: 0 !important;
         text-align: left !important;
     }
 
-    .columna-foto {
-        width: 100% !important;
-        flex: none !important;
-        display: flex !important;
-        justify-content: center !important;
-    }
-
     .pagina h2 {
         font-size: 2.8rem !important;
-        word-break: break-word;
-    }
-
-    .historia {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
     }
 
     .polaroid {
-        width: 90 !important;
         max-width: 280px !important;
         transform: rotate(0deg) !important;
-        margin: 0 auto !important;
+        margin: 15px auto !important;
     }
 
     .polaroid img,
     .polaroid video {
-        height: 240px !important;
-    }
-
-    .controles-paginacion {
-        position: sticky !important;
-        bottom: 0;
-        background-color: #d8b28a;
-        padding: 15px 0 10px 0;
-        margin-top: 25px;
+        height: 230px !important;
     }
 }
