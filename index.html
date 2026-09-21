@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Adventure Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PANTALLA 1: PORTADA -->
+    <section id="portada" class="pantalla">
+        <div class="tarjeta-portada">
+            <div class="marco-exterior">
+                <div class="marco-interior">
+                    <div class="marco-ovalado">
+                        <h1 class="titulo-up">
+                            <span class="linea">
+                                <span class="l-o">O</span><span class="l-u">U</span><span class="l-r">R</span>
+                            </span>
+                            <span class="linea">
+                                <span class="l-a">A</span><span class="l-d">D</span><span class="l-v">V</span><span class="l-e">E</span><span class="l-n">N</span><span class="l-t">T</span><span class="l-u2">U</span><span class="l-r2">R</span><span class="l-e2">E</span>
+                            </span>
+                            <span class="linea">
+                                <span class="l-b">B</span><span class="l-o2">O</span><span class="l-o3">O</span><span class="l-k">K</span>
+                            </span>
+                        </h1>
+                        <button id="btn-iniciar">Iniciar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 2: CONTENIDO DEL LIBRO (Navegación por botones) -->
+    <section id="contenido" class="pantalla oculto">
+        <div class="libro-contenedor">
+
+            <!-- PÁGINA 1 -->
+            <article class="pagina activa">
+                <div class="contenido-pagina">
+                    
+                    <div class="layout-dos-columnas">
+                        <!-- COLUMNA IZQUIERDA: TEXTO Y TÍTULO -->
+                        <div class="columna-texto">
+                            <br><h2>Nuestra Primer Cita</h2><br>
+                            <p class="fecha">📅 5/02/2024</p>
+                            
+                            <p class="historia">
+                                Todavía recuerdo ese día como uno de esos momentos que quisiera guardar para siempre. Estaba nervioso, no voy a mentir, pero también estaba demasiado feliz porque por fin iba a compartir un momento contigo, solo tú y yo.
+                            </p>
+                            
+                            <p class="historia">
+                                Fuimos a comer un postre y después terminamos en el parque, caminando, hablando y disfrutando de algo que, aunque parecía sencillo, para mí significó muchísimo. Estar a tu lado, mirarte y compartir ese momento contigo me hizo entender que lo que estaba sintiendo no era algo pasajero.
+                            </p>
+                            
+                            <p class="historia">
+                                Ese día fue la confirmación de que estaba empezando a sentir algo muy fuerte por ti, algo que con el tiempo solo ha crecido. Y lo más bonito de todo es que, a día de hoy, sigo sintiendo lo mismo.
+                            </p>
+                        </div>
+
+                        <!-- COLUMNA DERECHA: FOTO POLAROID CON LEYENDA -->
+                        <div class="columna-foto">
+                            <div class="polaroid">
+                                <video controls autoplay muted loop style="width: 100%; height: 280px; object-fit: cover; border-radius: 2px;">
+                                    <source src="Videos/Primera%20cita.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de video.
+                                </video>
+                                <p class="leyenda-polaroid">♡</p>
+                            </div>>
+                        </div>
+                    </div>
+
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior" disabled>←</button>
+                        <button class="btn-pag btn-siguiente">→</button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- PÁGINA 2 -->
+            <article class="pagina">
+                <div class="contenido-pagina">
+                    
+                    <div class="layout-dos-columnas">
+                        <!-- COLUMNA IZQUIERDA: TEXTO Y TÍTULO -->
+                        <div class="columna-texto">
+                            <br><h2>Nuestra Segunda Cita</h2><br>
+                            <p class="fecha">📅 ?/?/2024</p>
+                            
+                            <p class="historia">
+                                Ese día salimos y fuimos a comer. Puede que haya sido un plan sencillo, pero para mí significó muchísimo, porque una vez más tuve la oportunidad de compartir contigo y disfrutar de tu compañía.
+                            </p>
+                            
+                            <p class="historia">
+                                Recuerdo que pediste una limonada de cereza, una de tus favoritas. Y es curioso cómo un detalle tan pequeño terminó quedándose conmigo, porque hasta el día de hoy, cada vez que veo una limonada de cereza, inevitablemente me acuerdo de ti y de ese momento.
+                            </p>
+
+                            <p class="historia">
+                                Me acuerdo que después de cada salida contigo siempre terminaba llegando a mi casa con una sonrisota. Creo que eso dice mucho de lo feliz que me hacía estar contigo. Eran momentos sencillos, pero contigo se sentían especiales y se quedaban guardados en mi corazón.
+                            </p>
+                        </div>
+
+                        <!-- COLUMNA DERECHA: FOTO POLAROID CON LEYENDA -->
+                        <div class="columna-foto">
+                            <div class="polaroid">
+                                <img src="Videos/65fe8e65dc7b36f6d4fe8b0506c72e9a.jpg" alt="Foto segunda cita">
+                                <p class="leyenda-polaroid">Felicidad al estar contigo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">←</button>
+                        <button class="btn-pag btn-siguiente">→</button>
+                    </div>
+
+                </div>
+            </article>
+
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">←</button>
+                        <button class="btn-pag btn-siguiente">→</button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- PÁGINA 3 -->
+            <article class="pagina">
+                <div class="contenido-pagina">
+                    
+                    <div class="layout-dos-columnas">
+                        <!-- COLUMNA IZQUIERDA: TEXTO Y TÍTULO -->
+                        <div class="columna-texto">
+                            <br><h2>Sigues Siendo Tú</h2><br>
+                            <p class="fecha">📅 24/05/2026</p>
+                            
+                            <p class="historia">
+                                La última vez que nos vimos fue otro de esos momentos que quisiera guardar para siempre. Pasé un rato contigo y, aunque quizás para ti fue simplemente un momento más, para mí significó muchísimo.
+                            </p>
+                            
+                            <p class="historia">
+                                Han pasado dos años desde que comenzamos a vivir todo esto y, después de todo ese tiempo, hay algo que sigo teniendo claro: eres la mujer que quiero en mi vida. Todo lo que hemos vivido, cada momento y cada recuerdo solo me han hecho confirmar lo que siento por ti.
+                            </p>
+
+                            <p class="historia">
+                                Y aunque la vida pueda cambiar muchas cosas, hay algo que no ha cambiado en mí: nadie ha logrado importarme de la manera en que tú lo haces, y después de todo este tiempo, sigues siendo tú.
+                            </p>
+                        </div>
+
+                        <!-- COLUMNA DERECHA: FOTO POLAROID CON LEYENDA -->
+                        <div class="columna-foto">
+                            <div class="polaroid">
+                                <img src="Videos/8B08992C-EBA3-429F-9AC5-492034AFF932.jpg" alt="Sigues siendo tú">
+                                <p class="leyenda-polaroid">Siempre serás tú ♡</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">←</button>
+                        <button class="btn-pag btn-siguiente">→</button>
+                    </div>
+
+                    
+                </div>
+            </article>
+
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">← Anterior</button>
+                        <button class="btn-pag btn-siguiente">Siguiente →</button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- NUEVA PÁGINA: DETALLES ESPECIALES -->
+            <article class="pagina">
+                <div class="contenido-pagina">
+                    
+                    <div class="layout-dos-columnas">
+                        <!-- COLUMNA IZQUIERDA: TEXTO Y TÍTULO -->
+                        <div class="columna-texto">
+                            <br><br><h2>Detalles Especiales</h2><br>
+                            <br>
+                            
+                            <p class="historia">
+                                Una de las cosas que más amo es poder darte detalles, especialmente cuando sé que son cosas que realmente te gustan. Por eso te regalé a Lotso y al osito gruñoncito, porque sé cuánto amas esos peluches y quería darte algo que te hiciera ilusión y que pudieras tener contigo.
+                            </p>
+                            
+                            <p class="historia">
+                                Para mí, regalarte algo nunca se ha tratado solamente de darte un objeto, sino de pensar en ti, imaginar tu carita al recibirlo y poder sacarte una sonrisa. Me encanta verte feliz y saber que, aunque sea con un pequeño detalle, pude hacerte sentir especial.
+                            </p>
+
+                            <p class="historia">
+                                Y quiero seguir dándote muchas más cosas, no porque necesite una ocasión especial, sino porque simplemente amo tener detalles contigo y, sobre todo, amo verte feliz.
+                            </p>
+                        </div>
+
+                        <!-- COLUMNA DERECHA: POLAROID CON 3 FOTOS -->
+                        <div class="columna-foto">
+                            <div class="polaroid">
+                                <img src="Videos/4.JPG" alt="Regalo Lotso">
+                                <p class="leyenda-polaroid">Verte feliz me hace feliz</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">←</button>
+                        <button class="btn-pag btn-siguiente">→</button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- PÁGINA 5: FINAL / FUTURO -->
+            <article class="pagina">
+                <div class="contenido-pagina">
+                    
+                    <div class="layout-pagina-final" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: calc(100% - 60px); text-align: center; gap: 20px;">
+                        
+                        <!-- TÍTULO PRINCIPAL DE LA PÁGINA -->
+                        <h2 style="font-family: 'Caveat', cursive; font-size: 4.5rem; color: #2b170c; margin: 0;">
+                            <br>LA AVENTURA NOS AGUARDA 🎈<br>
+                        </h2>
+
+                        <!-- MANTENER ESPACIO LIBRE / FUTURAS FOTOS -->
+                        <p class="historia" style="max-width: 650px; font-size: 1.2rem; line-height: 1.6; color: #3b2314;">
+                            Aún quedan muchísimas páginas por escribir, lugares por conocer y recuerdos por guardar en nuestro libro. Y deseo que estés ahí porque tu eres mi aventura. 
+                        </p>
+
+                        <!-- CONTENEDOR PARA FUTURAS FOTOS (PUEDES DUPLICAR ESTE BLOQUE CUANDO TENGAS MÁS) -->
+                        <div class="polaroid" style="width: 320px; transform: rotate(-1.5deg); margin-top: 10px;">
+                            <img src="Videos/1.JPG" alt="Próxima Aventura" style="width: 100%; height: 260px; object-fit: cover; border-radius: 2px;">
+                            <p class="leyenda-polaroid" style="font-size: 1.4rem;">Nuestra próxima historia...</p>
+                        </div>
+
+                    </div>
+
+                    <!-- BARRA DE NAVEGACIÓN INFERIOR -->
+                    <div class="controles-paginacion">
+                        <button class="btn-pag btn-anterior">←</button>
+                    </div>
+
+                </div>
+            </article>
+        </div>
+    </section>
+
+        <!-- MÚSICA DE FONDO EN BUCLE INFINITO -->
+    <audio id="musica-fondo" autoplay loop preload="auto">
+        <source src="Videos/Married Life.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
