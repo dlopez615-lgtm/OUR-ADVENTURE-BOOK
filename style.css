@@ -223,87 +223,6 @@ body {
     overflow-y: auto;
 }
 
-/* ==========================================================================
-   6. ADAPTACIÓN PARA CELULARES (MEDIA QUERY)
-   ========================================================================== */
-@media (max-width: 768px) {
-    body {
-        overflow-y: auto;
-    }
-
-    .pantalla, 
-    .libro-contenedor, 
-    .pagina {
-        min-height: 100vh;
-        height: auto;
-    }
-
-    .contenido-pagina {
-        padding: 30px 20px 20px 25px;
-        border-left: 10px solid #3d1e0d;
-        min-height: 100vh;
-        height: auto;
-    }
-
-    .layout-dos-columnas {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        height: auto;
-    }
-
-    .columna-texto, 
-    .columna-foto {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .pagina h2 {
-        font-size: 2.8rem;
-    }
-
-    .historia {
-        font-size: 1rem;
-        line-height: 1.45;
-    }
-
-    .polaroid {
-        max-width: 280px;
-        transform: rotate(0deg);
-        margin: 0 auto;
-    }
-
-    .polaroid img,
-    .polaroid video {
-        height: 230px;
-    }
-
-    .layout-pagina-final h2 {
-        font-size: 3rem !important;
-    }
-}
-.pagina h2 {
-    font-family: 'Caveat', cursive;
-    font-size: 3.8rem;
-    color: #2b170c;
-    margin-bottom: 2px;
-    line-height: 1;
-}
-
-.fecha {
-    font-size: 1.05rem;
-    color: #4a2e1b;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.historia {
-    line-height: 1.55;
-    font-size: 1.08rem;
-    color: #2c1a0e;
-    margin-bottom: 16px;
-}
-
 /* COLUMNA DERECHA: FOTO POLAROID */
 .columna-foto {
     flex: 0.8;
@@ -374,4 +293,77 @@ body {
     background-color: rgba(90, 46, 22, 0.25);
     color: rgba(247, 243, 233, 0.4);
     cursor: not-allowed;
+}
+
+/* ==========================================================================
+   6. ADAPTACIÓN PARA CELULARES (MEDIA QUERY CORREGIDO)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto !important;
+    }
+
+    .pantalla, 
+    .libro-contenedor, 
+    .pagina {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .contenido-pagina {
+        padding: 25px 15px 25px 20px !important;
+        border-left: 10px solid #3d1e0d !important;
+        height: auto !important;
+        min-height: 100vh;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    .layout-dos-columnas {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: auto !important;
+        gap: 20px !important;
+    }
+
+    .columna-texto {
+        width: 100% !important;
+        flex: none !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+    }
+
+    .columna-foto {
+        width: 100% !important;
+        flex: none !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .pagina h2 {
+        font-size: 2.5rem !important;
+        word-break: break-word;
+    }
+
+    .historia {
+        font-size: 0.95rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .polaroid {
+        width: 85% !important;
+        max-width: 260px !important;
+        transform: rotate(0deg) !important;
+        margin: 0 auto !important;
+    }
+
+    .polaroid img,
+    .polaroid video {
+        height: 220px !important;
+    }
 }
